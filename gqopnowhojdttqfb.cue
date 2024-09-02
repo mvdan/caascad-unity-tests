@@ -19,8 +19,8 @@ envs: [string]: {
 			cjppmetyaderslgo_aws_role: configurations.cjppmetyaderslgo_aws_sts_roles.tfvars.roles.operator.cjppmetyaderslgo_role_name
 
 			dtmyfegilaxrvzuc_cjppmetyaderslgo_aws_role: "power_user_\(infra_zone_name)"
-			dtmyfegilaxrvzuc_region_name:    envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_region_name
-			dtmyfegilaxrvzuc_table_name:     envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_table_name
+			dtmyfegilaxrvzuc_region_name:               envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_region_name
+			dtmyfegilaxrvzuc_table_name:                envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_table_name
 
 			vpc_name:     configurations.seotfaqctmulanqa.tfvars.vpc_name
 			cluster_name: configurations.zsanvdsnathnlyaf.tfvars.cluster_name

@@ -24,12 +24,12 @@ envs: [string]: {
 	configurations: ["vsuvlqcoycxyhxdu"]: {
 		providers: kubernetes: "\(zone.name)": _
 		helm: namespace: "concourse-infra"
-		helm: values:    (#ConcourseHelmValues & {
-			zone_name:     zone.name
-			cjppmetyaderslgo_role:    "concourse-infra"
-			ingress_class: "ingress-nginx-private"
-			hostname:      "ci-infra.\(zone.name).comnet.com"
-			realm:         *zone.name | string
+		helm: values: (#ConcourseHelmValues & {
+			zone_name:             zone.name
+			cjppmetyaderslgo_role: "concourse-infra"
+			ingress_class:         "ingress-nginx-private"
+			hostname:              "ci-infra.\(zone.name).comnet.com"
+			realm:                 *zone.name | string
 			if zone.name == "infra-zwtkxvyalrulrfjt" {
 				realm: "Comnet"
 			}
@@ -42,13 +42,13 @@ envs: [string]: {
 	configurations: ["jreguddlvoheaxlk"]: {
 		providers: kubernetes: "\(zone.name)": _
 		helm: namespace: "concourse"
-		helm: values:    (#ConcourseHelmValues & {
-			zone_name:      zone.name
-			cjppmetyaderslgo_role:     "concourse"
-			ingress_class:  "ingress-nginx-public"
-			hostname:       "ci.\(zone.name).comnet.com"
-			realm:          *zone.name | string
-			cc_prom_source: "cloud-client"
+		helm: values: (#ConcourseHelmValues & {
+			zone_name:             zone.name
+			cjppmetyaderslgo_role: "concourse"
+			ingress_class:         "ingress-nginx-public"
+			hostname:              "ci.\(zone.name).comnet.com"
+			realm:                 *zone.name | string
+			cc_prom_source:        "cloud-client"
 		}).values
 	}
 }
@@ -77,12 +77,12 @@ envs: [=~"^(infra-zwtkxvyalrulrfjt|infra-zsgqzvbsvqufttlk|ocb-ilpybubiybhtluxw|o
 }
 
 #ConcourseHelmValues: {
-	zone_name:      string
-	cjppmetyaderslgo_role:     "concourse-infra" | "concourse"
-	ingress_class:  "ingress-nginx-private" | "ingress-nginx-public"
-	realm:          string
-	cc_prom_source: string
-	hostname:       string
+	zone_name:             string
+	cjppmetyaderslgo_role: "concourse-infra" | "concourse"
+	ingress_class:         "ingress-nginx-private" | "ingress-nginx-public"
+	realm:                 string
+	cc_prom_source:        string
+	hostname:              string
 
 	values: concourse: {
 		image:    "concourse/concourse"
@@ -250,14 +250,14 @@ envs: [=~"^(infra-zwtkxvyalrulrfjt|infra-zsgqzvbsvqufttlk|ocb-ilpybubiybhtluxw|o
 			ingress: {
 				enabled: true
 				annotations: {
-					"kubernetes.io/ingress.class":    ingress_class
-					"kubernetes.io/tls-acme":         "true"
+					"kubernetes.io/ingress.class":        ingress_class
+					"kubernetes.io/tls-acme":             "true"
 					"byzbcddzcjthnazj.io/cluster-issuer": "letsencrypt-prod"
 				}
-				hosts: [ hostname]
+				hosts: [hostname]
 				tls: [{
 					secretName: "concourse-web-tls"
-					hosts: [ hostname]
+					hosts: [hostname]
 				}]
 			}
 

@@ -14,8 +14,8 @@ envs: [string]: {
 			infra_zone_name: zone.infra_zone_name
 
 			dtmyfegilaxrvzuc_cjppmetyaderslgo_aws_role: "power_user_\(infra_zone_name)"
-			dtmyfegilaxrvzuc_region_name:    envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_region_name
-			dtmyfegilaxrvzuc_table_name:     envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_table_name
+			dtmyfegilaxrvzuc_region_name:               envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_region_name
+			dtmyfegilaxrvzuc_table_name:                envs[infra_zone_name].configurations.dtmyfegilaxrvzuc.tfvars.dtmyfegilaxrvzuc_table_name
 
 			lb_subnet_name: envs[zone.name].configurations.ekcfqfyldqagosjs.tfvars.subnet_name
 

@@ -23,11 +23,11 @@ envs: [string]: {
 				}
 				"""
 			pre_plan: strings.Join([
-					Migration,
+				Migration,
 			], "\n")
 		}
 		tfvars: #Rancher2InfraTFvars & {
-			zone_name:      "\(zone.name)"
+			zone_name:     "\(zone.name)"
 			comnet_domain: "\(zone.domain_name)"
 		}
 	}

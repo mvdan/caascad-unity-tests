@@ -28,7 +28,7 @@ pipelines: "envs-plan-all-\(infra_zone)": {
 						trigger: true
 					},
 					{
-						task:   "generate"
+						task: "generate"
 						config: #NixTaskConfig & {
 							inputs: [
 								{
@@ -57,7 +57,7 @@ pipelines: "envs-plan-all-\(infra_zone)": {
 				]
 			},
 		] + [
-			for idx, job in [ for env_name, env in t.envs
+			for idx, job in [for env_name, env in t.envs
 				for config_name, _ in env.configurations
 				if env.infra_zone.name == infra_zone {
 					env:    env_name
@@ -76,7 +76,7 @@ pipelines: "envs-plan-all-\(infra_zone)": {
 						trigger: true
 					},
 					{
-						task:   "plan"
+						task: "plan"
 						config: #NixTaskConfig & {
 							params: {
 								"TRACKBONE_VAULT_\(infra_zone)_ROLE_ID":   "((trackbone.role_id))"

@@ -31,7 +31,7 @@ envs: [string]: {
 				pre_plan: Kswitch
 			}
 			pre_apply: strings.Join([
-					if bootstrap {
+				if bootstrap {
 					Kswitch
 				},
 				"""
@@ -44,8 +44,7 @@ envs: [string]: {
 			release_name: "csbhovxlbadjlhuw"
 			path:         "./helm/comnet-csbhovxlbadjlhuw"
 			namespace:    "csbhovxlbadjlhuw"
-			values:       #OPAHelmValues & {
-			}
+			values: #OPAHelmValues & {}
 		}
 	}
 }

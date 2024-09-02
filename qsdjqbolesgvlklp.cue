@@ -111,15 +111,15 @@ envs: [string]: {
 		// Note : we are using thanos-cloud-comnet secret here for all buckets because
 		// the AK/SK are the same for all buckets. So any AK/SK will fit. Let's
 		// choose the thanos-cloud-comnet ones.
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject":               "true"
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/role":                       *"thanos-cloud-comnet" | string
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/tls-skip-verify":            "true"
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-requests-cpu":         "1m"
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-requests-mem":         "1Mi"
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-limits-cpu":           "500m"
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-limits-mem":           "128Mi"
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-pre-populate-only":    "true"
-		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject-secret-aksk":   *"secret/bucket/thanos-cloud-comnet" | string
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject":             "true"
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/role":                     *"thanos-cloud-comnet" | string
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/tls-skip-verify":          "true"
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-requests-cpu":       "1m"
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-requests-mem":       "1Mi"
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-limits-cpu":         "500m"
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-limits-mem":         "128Mi"
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-pre-populate-only":  "true"
+		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject-secret-aksk": *"secret/bucket/thanos-cloud-comnet" | string
 		"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject-template-aksk": *"""
 			 {{- with secret "secret/bucket/thanos-cloud-comnet" }}
 			 [default]

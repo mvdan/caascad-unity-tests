@@ -36,10 +36,10 @@ envs: [string]: {
 					"cookie-expire":                        "12h"
 				}
 				podAnnotations: {
-					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject":                     "true"
-					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/role":                             "wpkeypipxxjfjnsg"
-					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/tls-skip-verify":                  "true"
-					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-pre-populate-only":          "true"
+					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject":                         "true"
+					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/role":                                 "wpkeypipxxjfjnsg"
+					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/tls-skip-verify":                      "true"
+					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-pre-populate-only":              "true"
 					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject-secret-wpkeypipxxjfjnsg": "secret/oidc/wpkeypipxxjfjnsg"
 					"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject-template-wpkeypipxxjfjnsg": """
 						{{- with secret \"secret/oidc/wpkeypipxxjfjnsg\" -}}

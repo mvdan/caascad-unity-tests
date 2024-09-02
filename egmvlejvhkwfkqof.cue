@@ -15,7 +15,7 @@ envs: [string]: {
 			tag: "apzqkrrcwtbaqmwu-v1.9.1"
 		}) | #TerraformLib | #LocalSource
 		source: path: "configurations/apzqkrrcwtbaqmwu"
-		providers: kubernetes: "\(zone.name)":  _
+		providers: kubernetes: "\(zone.name)":             _
 		providers: cjppmetyaderslgo: "\(infra_zone.name)": _
 		tfvars: {
 			zone_name:       zone.name

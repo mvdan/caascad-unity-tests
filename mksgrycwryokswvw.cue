@@ -7,8 +7,8 @@ envs: [string]: {
 			tag: "tczfxjfecbzgxqeq-cjppmetyaderslgo-infra-v7.3.0"
 		}) | #TerraformLib | #LocalSource
 		source: path: "configurations/tczfxjfecbzgxqeq-cjppmetyaderslgo-infra"
-		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:           _
-		providers: cjppmetyaderslgo: "\(zone.name)": _
+		providers: cjppmetyaderslgo: ipkmllvrrijnkfib: _
+		providers: cjppmetyaderslgo: "\(zone.name)":   _
 		tfvars: {
 			zone_name:     zone.name
 			zone_provider: zone.provider.type

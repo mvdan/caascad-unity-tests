@@ -10,7 +10,7 @@ envs: [string]: {
 		// Set as the default value as it needs to be different for slbcrinxgodkifok
 		source: path: *"configurations/ekcfqfyldqagosjs" | string
 		providers: cjppmetyaderslgo: "\(infra_zone.name)": _
-		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:                 _
+		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:     _
 		tfvars: {
 			zone_name:       zone.name
 			domain_name:     zone.domain_name
@@ -25,13 +25,13 @@ envs: [string]: {
 			cjppmetyaderslgo_aws_iam_role: "account_bootstrap_374014906619"
 
 			dns_nameservers: *["127.0.0.1", "127.0.0.1"] | [...string]
-			network_name:    *"comnet-\(zone.name)-network" | string
-			subnet_name:     *"comnet-\(zone.name)-subnet" | string
-			subnet_cidr:     *"127.0.0.1/16" | string
-			router_name:     *"comnet-\(zone.name)-router" | string
-			nat_gw_name:     *"comnet-\(zone.name)-gw" | string
-			keypair_name:    *"provisioning-\(zone.name)" | string
-			nat_gw_spec:     *"1" | "2" | "3" | "4" // for Small, Medium, Large, Extra-Large
+			network_name: *"comnet-\(zone.name)-network" | string
+			subnet_name:  *"comnet-\(zone.name)-subnet" | string
+			subnet_cidr:  *"127.0.0.1/16" | string
+			router_name:  *"comnet-\(zone.name)-router" | string
+			nat_gw_name:  *"comnet-\(zone.name)-gw" | string
+			keypair_name: *"provisioning-\(zone.name)" | string
+			nat_gw_spec:  *"1" | "2" | "3" | "4" // for Small, Medium, Large, Extra-Large
 		}
 	}
 }

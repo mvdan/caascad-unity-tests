@@ -26,7 +26,7 @@ envs: [string]: {
 				trap cleanup EXIT INT TERM
 				"""
 			pre_plan: strings.Join([
-					if bootstrap {
+				if bootstrap {
 					Kswitch
 				},
 			], "\n")
@@ -35,13 +35,13 @@ envs: [string]: {
 				terraform state pull > "${_}/\(zone.name)-terraform.tfstate"
 				"""
 			pre_apply: strings.Join([
-					if bootstrap {
+				if bootstrap {
 					Kswitch
 				},
 			], "\n")
 		}
 		tfvars: {
-			zone_name:      "\(zone.name)"
+			zone_name:     "\(zone.name)"
 			comnet_domain: "\(zone.domain_name)"
 		}
 	}

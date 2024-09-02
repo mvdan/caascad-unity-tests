@@ -15,12 +15,12 @@ envs: [string]: {
 		source: path: "configurations/gkqwkkcalybyefyk"
 		providers: cjppmetyaderslgo: "\(zone.name)": _
 		tfvars: {
-			zone_name:                 zone.name
-			domain_name:               zone.domain_name
+			zone_name:                                        zone.name
+			domain_name:                                      zone.domain_name
 			ipkmllvrrijnkfib_cjppmetyaderslgo_aws_account_id: z.aws_accounts.comnet_prod.account_id
 		}
 		files: "accounts.json": {
-			path:    "cue"
+			path: "cue"
 			content: json.Marshal({
 				accounts: {
 					for n, a in z.aws_accounts

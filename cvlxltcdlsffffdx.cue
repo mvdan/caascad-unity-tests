@@ -38,7 +38,7 @@ envs: [string]: {
 						service: {
 							if IngressType == "private" {
 								//The NAT GW is needed because the blackbox exporter has probes for services behind the private ingress
-								loadBalancerSourceRanges: list.FlattenN([ ipam.natgw[infra_zone.name], ipam.vpn.comnet, ipam.natgw[zone.name]], 1)
+								loadBalancerSourceRanges: list.FlattenN([ipam.natgw[infra_zone.name], ipam.vpn.comnet, ipam.natgw[zone.name]], 1)
 							}
 							annotations: {
 								"service.beta.kubernetes.io/aws-load-balancer-backend-protocol":                  "tcp"

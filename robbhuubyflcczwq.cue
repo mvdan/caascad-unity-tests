@@ -48,7 +48,7 @@ envs: [string]: {
 				desired_nodes: *3 | int
 				max_nodes:     *3 | int
 				volume_size:   *100 | int
-				labels:        *{} | {...}
+				labels: *{} | {...}
 				taints: [...string]
 			}
 

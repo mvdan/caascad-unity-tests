@@ -105,10 +105,10 @@ envs: [string]: {
 							storage_provisioner: "flexvolume-huawei.com/fuxinfs"
 							parameters: {
 								"kubernetes.io/adcopcpjuuzvxnflosslevel": "rw"
-								"kubernetes.io/description": ""
-								"kubernetes.io/ispublic":    "false"
-								"kubernetes.io/shareproto":  "NFS"
-								"kubernetes.io/storagetype": "NFS"
+								"kubernetes.io/description":              ""
+								"kubernetes.io/ispublic":                 "false"
+								"kubernetes.io/shareproto":               "NFS"
+								"kubernetes.io/storagetype":              "NFS"
 							}
 							dynamic_parameters: [
 								{
@@ -125,10 +125,10 @@ envs: [string]: {
 						if configurations["dcopcpjuuzvxnflo"].tfvars.cluster_version !~ "^v1[.]13[.][a-zA-Z0-9_-]+$" {
 							storage_provisioner: "everest-csi-provisioner"
 							parameters: {
-								"csi.storage.k8s.io/csi-driver-name": "nas.csi.everest.io"
-								"csi.storage.k8s.io/fstype":          "nfs"
-								"everest.io/share-adcopcpjuuzvxnfloss-level":      "rw"
-								"everest.io/share-is-public":         "false"
+								"csi.storage.k8s.io/csi-driver-name":         "nas.csi.everest.io"
+								"csi.storage.k8s.io/fstype":                  "nfs"
+								"everest.io/share-adcopcpjuuzvxnfloss-level": "rw"
+								"everest.io/share-is-public":                 "false"
 							}
 							dynamic_parameters: [
 								{

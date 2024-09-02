@@ -26,14 +26,14 @@ envs: [string]: {
 								port:          "web"
 								interval:      "60s"
 								scrapeTimeout: "30s"
-								relabelings:   [...#PrometheusOperatorRelabelConfig] & [
-										{
+								relabelings: [...#PrometheusOperatorRelabelConfig] & [
+									{
 										replacement: "cloud-app"
 										targetLabel: "cc_prom_source"
 									},
 								]
 							}]
-							namespaceSelector: matchNames: [ "monitoring-app"]
+							namespaceSelector: matchNames: ["monitoring-app"]
 							selector: matchLabels: app: "kube-prometheus-stack-prometheus"
 						}
 					}

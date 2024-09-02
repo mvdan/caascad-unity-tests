@@ -32,10 +32,10 @@ envs: [string]: {
 				}
 
 				provider: aws: {
-					region:     "eu-west-3"
+					region:                  "eu-west-3"
 					adcopcpjuuzvxnfloss_key: "${data.cjppmetyaderslgo_aws_adcopcpjuuzvxnfloss_credentials.bootstrap.adcopcpjuuzvxnfloss_key}"
-					secret_key: "${data.cjppmetyaderslgo_aws_adcopcpjuuzvxnfloss_credentials.bootstrap.secret_key}"
-					token:      "${data.cjppmetyaderslgo_aws_adcopcpjuuzvxnfloss_credentials.bootstrap.security_token}"
+					secret_key:              "${data.cjppmetyaderslgo_aws_adcopcpjuuzvxnfloss_credentials.bootstrap.secret_key}"
+					token:                   "${data.cjppmetyaderslgo_aws_adcopcpjuuzvxnfloss_credentials.bootstrap.security_token}"
 				}
 			})
 		}

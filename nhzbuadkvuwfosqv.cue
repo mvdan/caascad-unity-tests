@@ -17,16 +17,16 @@ envs: [string]: {
 						prometheusZone: "comnet"
 						spec: {
 							endpoints: [{
-								path:        "/metrics"
-								port:        "web"
+								path: "/metrics"
+								port: "web"
 								relabelings: [...#PrometheusOperatorRelabelConfig] & [
-										{
+									{
 										replacement: "cloud-client"
 										targetLabel: "cc_prom_source"
 									},
 								]
 							}]
-							namespaceSelector: matchNames: [ "monitoring-client"]
+							namespaceSelector: matchNames: ["monitoring-client"]
 							selector: matchLabels: app: "kube-prometheus-stack-prometheus"
 						}
 					}
@@ -35,16 +35,16 @@ envs: [string]: {
 						prometheusZone: "comnet"
 						spec: {
 							endpoints: [{
-								path:        "/metrics"
-								port:        "web"
+								path: "/metrics"
+								port: "web"
 								relabelings: [...#PrometheusOperatorRelabelConfig] & [
-										{
+									{
 										replacement: "cloud-client"
 										targetLabel: "cc_prom_source"
 									},
 								]
 							}]
-							namespaceSelector: matchNames: [ "monitoring-client"]
+							namespaceSelector: matchNames: ["monitoring-client"]
 							selector: matchLabels: app: "kube-prometheus-stack-alertmanager"
 						}
 					}
@@ -52,16 +52,16 @@ envs: [string]: {
 						prometheusZone: "comnet"
 						spec: {
 							endpoints: [{
-								path:        "/metrics"
-								port:        "service"
+								path: "/metrics"
+								port: "service"
 								relabelings: [...#PrometheusOperatorRelabelConfig] & [
-										{
+									{
 										replacement: "cloud-client"
 										targetLabel: "cc_prom_source"
 									},
 								]
 							}]
-							namespaceSelector: matchNames: [ "monitoring-client"]
+							namespaceSelector: matchNames: ["monitoring-client"]
 							selector: matchLabels: "app.kubernetes.io/name": "grafana"
 						}
 					}

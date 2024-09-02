@@ -45,7 +45,7 @@ envs: [string]: {
 		if !bootstrap {
 			providers: kubernetes: "\(zone.name)": _
 		}
-		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:                      _
+		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:          _
 		providers: cjppmetyaderslgo: "\(zone.infra_zone_name)": _
 
 		helm: {
@@ -75,7 +75,7 @@ envs: [string]: {
 
 				if zone.type == "infra" || zone.name == "ipkmllvrrijnkfib" {
 					blackbox_http_2xx_targets: *[
-									"\(helm.values.tczfxjfecbzgxqeq.ingress.hostname)/auth/realms/\(zone.name)/account",
+						"\(helm.values.tczfxjfecbzgxqeq.ingress.hostname)/auth/realms/\(zone.name)/account",
 					] | [...string]
 				}
 				if zone.type == "cloud" {

@@ -7,8 +7,8 @@ envs: [string]: {
 			tag: "bujzeovffefijufa-v2.0.1"
 		}) | #TerraformLib | #LocalSource
 		source: path: "configurations/bujzeovffefijufa"
-		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:                _
-		providers: kubernetes: "\(zone.name)": _
+		providers: cjppmetyaderslgo: ipkmllvrrijnkfib: _
+		providers: kubernetes: "\(zone.name)":         _
 		tfvars: {
 			zone_name: zone.name
 

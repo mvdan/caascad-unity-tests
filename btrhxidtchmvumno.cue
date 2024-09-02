@@ -23,29 +23,29 @@ envs: [string]: {
 										"{__name__=~\"s3_bucket.*\", s3_bucket_name=~\"loki-cloud-client-\(zone.name)|thanos-cloud-app-\(zone.name)|quay-\(zone.name)\"}",
 									]
 								}
-								port:              "web"
+								port: "web"
 								metricRelabelings: [...#PrometheusOperatorRelabelConfig] & [{
 									regex:  "instance|pod|service|job|namespace|endpoint|exported_.*"
 									action: "labeldrop"
 								}, {
 									regex:       "loki.*"
 									replacement: "Logs"
-									sourceLabels: [ "s3_bucket_name"]
+									sourceLabels: ["s3_bucket_name"]
 									targetLabel: "grafana_dashboard_panel_name"
 								}, {
 									regex:       "thanos.*"
 									replacement: "Metrics"
-									sourceLabels: [ "s3_bucket_name"]
+									sourceLabels: ["s3_bucket_name"]
 									targetLabel: "grafana_dashboard_panel_name"
 								}, {
 									regex:       "quay.*"
 									replacement: "Docker images"
-									sourceLabels: [ "s3_bucket_name"]
+									sourceLabels: ["s3_bucket_name"]
 									targetLabel: "grafana_dashboard_panel_name"
 								}]
 							}]
 
-							namespaceSelector: matchNames: [ "monitoring"]
+							namespaceSelector: matchNames: ["monitoring"]
 							selector: matchLabels: app: "kube-prometheus-stack-prometheus"
 						}
 					}

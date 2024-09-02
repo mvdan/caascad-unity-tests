@@ -12,9 +12,9 @@ envs: [string]: {
 			tag: "rrboyqsjnqwlqdys-v5.0.2"
 		}) | #TerraformLib | #LocalSource
 		source: path: "configurations/rrboyqsjnqwlqdys-client"
-		providers: cjppmetyaderslgo: "\(zone.parent_zone_name)":      _
-		providers: cjppmetyaderslgo: "\(zone.infra_zone_name)":       _
-		providers: kubernetes: "\(zone.parent_zone_name)": _
+		providers: cjppmetyaderslgo: "\(zone.parent_zone_name)": _
+		providers: cjppmetyaderslgo: "\(zone.infra_zone_name)":  _
+		providers: kubernetes: "\(zone.parent_zone_name)":       _
 		if !bootstrap {
 			providers: kubernetes: "\(zone.name)": _
 		}
@@ -58,13 +58,13 @@ envs: [string]: {
 				}
 				"""
 			pre_plan: strings.Join([
-					if bootstrap {
+				if bootstrap {
 					Kswitch
 				},
 				Migration,
 			], "\n")
 			pre_apply: strings.Join([
-					if bootstrap {
+				if bootstrap {
 					Kswitch
 				},
 			], "\n")
@@ -73,7 +73,7 @@ envs: [string]: {
 			zone_name:        "\(zone.name)"
 			parent_zone_name: "\(zone.parent_zone_name)"
 			infra_zone_name:  "\(zone.infra_zone_name)"
-			comnet_domain:   "\(parent_zone.domain_name)"
+			comnet_domain:    "\(parent_zone.domain_name)"
 		}
 	}
 }

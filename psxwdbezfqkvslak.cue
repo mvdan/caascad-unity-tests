@@ -9,7 +9,7 @@ envs: [string]: {
 			tag: "sfkxmhgshgoiaxpr-v2.2.1"
 		}) | #TerraformLib | #LocalSource
 		source: path: "configurations/sfkxmhgshgoiaxpr"
-		providers: kubernetes: "\(zone.name)":  _
+		providers: kubernetes: "\(zone.name)":             _
 		providers: cjppmetyaderslgo: "\(infra_zone.name)": _
 		tfvars: {
 			zone_name:           zone.name

@@ -34,7 +34,7 @@ pipelines: "envs-alert-diff-\(infra_zone)": pipeline: {
 				trigger: true
 			},
 			{
-				task:   "alert"
+				task: "alert"
 				config: #NixTaskConfig & {
 					inputs: [
 						{

@@ -10,10 +10,10 @@ envs: [string]: {
 		source: path: "configurations/todlrceqzsfstqnz_rules"
 		providers: cjppmetyaderslgo: "ipkmllvrrijnkfib": _
 		tfvars: {
-			zone_name:                 zone.name
-			ses_receipt_rule_set_name: "todlrceqzsfstqnz_rules-\(zone.name)"
-			receipt_rule_recipient:    "support.\(zone.name)@comnet.com"
-			cjppmetyaderslgo_aws_sts_role:        "power_user_comnet-prod"
+			zone_name:                     zone.name
+			ses_receipt_rule_set_name:     "todlrceqzsfstqnz_rules-\(zone.name)"
+			receipt_rule_recipient:        "support.\(zone.name)@comnet.com"
+			cjppmetyaderslgo_aws_sts_role: "power_user_comnet-prod"
 		}
 	}
 }

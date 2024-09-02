@@ -18,14 +18,14 @@ envs: [string]: {
 			path:         "./comnet-iyphjdnvrvpkizcu-chart"
 			namespace:    "iyphjdnvrvpkizcu"
 			values: {
-				route: enabled:           false
+				route: enabled:                      false
 				iyphjdnvrvpkizcuBackup: enabled:     false
 				iyphjdnvrvpkizcuProxyRoute: enabled: false
 				iyphjdnvrvpkizcuProxy: {
 					enabled: true
 					env: {
 						iyphjdnvrvpkizcuHttpHost: "iyphjdnvrvpkizcu.\(zone.name).\(zone.domain_name)"
-						enforceHttps:  true
+						enforceHttps:             true
 					}
 				}
 				service: {

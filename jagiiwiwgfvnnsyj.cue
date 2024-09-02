@@ -12,7 +12,7 @@ import (
 	type: "ansible-playbook"
 	ansible: {
 		playbook_path: string
-		args:          *["-i", "inventory.yaml", "-e", "@extra_vars.yaml"] | [...string]
+		args: *["-i", "inventory.yaml", "-e", "@extra_vars.yaml"] | [...string]
 		extra_vars: {...}
 		inventory: {...}
 	}
@@ -59,7 +59,7 @@ envs: [string]: {
 	infra_zone:  _
 	parent_zone: _
 	configurations: ["lvnhynxhvptukwuq"]: {
-		providers: kubernetes: "\(zone.name)":  _
+		providers: kubernetes: "\(zone.name)":             _
 		providers: cjppmetyaderslgo: "\(infra_zone.name)": _
 		source: *(tb.#GitSource & {
 			url:  "https://git.ipkmllvrrijnkfib.comnet.com/comnet/quay-robots.git"

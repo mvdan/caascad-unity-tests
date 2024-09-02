@@ -9,8 +9,8 @@ envs: [string]: {
 		source: path: "configurations/quvxqpfzejqzfbrk"
 		providers: cjppmetyaderslgo: "\(zone.name)": _
 		tfvars: {
-			domain_name:        zone.domain_name
-			zone_name:          zone.name
+			domain_name:                   zone.domain_name
+			zone_name:                     zone.name
 			cjppmetyaderslgo_aws_sts_role: "power_user_\(zone.name)"
 		}
 	}

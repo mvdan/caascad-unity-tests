@@ -10,11 +10,11 @@ envs: [string]: {
 		source: path: "configurations/jzhfhhxedcycwbwx"
 
 		providers: cjppmetyaderslgo: "\(infra_zone.name)": _
-		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:                 _
+		providers: cjppmetyaderslgo: ipkmllvrrijnkfib:     _
 		tfvars: {
-			zone_name:      zone.name
-			cjppmetyaderslgo_url:      "https://cjppmetyaderslgo.\(infra_zone.name).\(infra_zone.domain_name)"
-			fe_domain_name: zone.provider.domain_name
+			zone_name:            zone.name
+			cjppmetyaderslgo_url: "https://cjppmetyaderslgo.\(infra_zone.name).\(infra_zone.domain_name)"
+			fe_domain_name:       zone.provider.domain_name
 		}
 
 		// FIXME: project deletion doesn't work on FE

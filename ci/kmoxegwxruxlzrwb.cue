@@ -25,7 +25,7 @@ if infra_zone == "infra-zwtkxvyalrulrfjt" {
 					get: #GitResource.name
 				},
 				{
-					task:   "update-comnet-zones"
+					task: "update-comnet-zones"
 					config: #NixTaskConfig & {
 						params: {
 							GITLAB_URL:      "((git-ipkmllvrrijnkfib.url))"

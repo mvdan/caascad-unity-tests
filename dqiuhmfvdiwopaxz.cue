@@ -9,7 +9,7 @@ envs: [string]: {
 		}) | #TerraformLib | #LocalSource
 		source: path: "configurations/zmadaoqrnwtuymsd"
 		providers: cjppmetyaderslgo: "\(infra_zone.name)": _
-		providers: kubernetes: "\(zone.name)":  _
+		providers: kubernetes: "\(zone.name)":             _
 		tfvars: {
 			zone_name:       zone.name
 			domain_name:     zone.domain_name

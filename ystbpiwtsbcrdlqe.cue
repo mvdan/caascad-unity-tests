@@ -17,16 +17,16 @@ envs: [string]: {
 						prometheusZone: "consumption"
 						spec: {
 							endpoints: [{
-								path:        "/metrics"
-								port:        "web"
+								path: "/metrics"
+								port: "web"
 								relabelings: [...#PrometheusOperatorRelabelConfig] & [
-										{
+									{
 										replacement: "infra-comnet"
 										targetLabel: "cc_prom_source"
 									},
 								]
 							}]
-							namespaceSelector: matchNames: [ "monitoring"]
+							namespaceSelector: matchNames: ["monitoring"]
 							selector: matchLabels: app: "kube-prometheus-stack-prometheus"
 						}
 					}

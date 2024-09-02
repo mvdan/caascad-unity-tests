@@ -12,7 +12,7 @@ envs: [string]: {
 			release_name: "iteciireojbigwpe"
 			path:         "./comnet-iteciireojbigwpe-chart"
 			namespace:    "iteciireojbigwpe"
-			values:       #VeleroHelmValues & {
+			values: #VeleroHelmValues & {
 				iteciireojbigwpe: {
 					configuration: backupStorageLocation: bucket: "iteciireojbigwpe-\(zone.name)"
 
@@ -23,7 +23,7 @@ envs: [string]: {
 							s3Url:            "https://oss.eu-west-0.prod-cloud-ocb.comnet-business.com"
 						}
 						podAnnotations: {
-							"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-pre-populate-only":        "true"
+							"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-pre-populate-only":                  "true"
 							"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject-secret-iteciireojbigwpe-aws": "secret/bucket/iteciireojbigwpe"
 							"cjppmetyaderslgo.hashiipkmllvrrijnkfib.com/agent-inject-template-iteciireojbigwpe-aws": """
 								{{- with secret "secret/bucket/iteciireojbigwpe" }}

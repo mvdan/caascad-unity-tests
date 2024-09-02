@@ -48,7 +48,7 @@ pipelines: "envs-mr-\(infra_zone)": pipeline: {
 				}
 			},
 			{
-				task:   "apply"
+				task: "apply"
 				config: #NixTaskConfig & {
 					params: {
 						"TRACKBONE_VAULT_\(infra_zone)_ROLE_ID":   "((trackbone.role_id))"
@@ -150,7 +150,7 @@ pipelines: "envs-mr-\(infra_zone)": pipeline: {
 				}
 			},
 			{
-				task:   "plan"
+				task: "plan"
 				config: #NixTaskConfig & {
 					params: {
 						"TRACKBONE_VAULT_\(infra_zone)_ROLE_ID":   "((trackbone.role_id))"

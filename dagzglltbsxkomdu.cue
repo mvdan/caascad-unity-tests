@@ -17,16 +17,16 @@ envs: [string]: {
 						prometheusZone: "comnet"
 						spec: {
 							endpoints: [{
-								path:        "/metrics"
-								port:        "web"
+								path: "/metrics"
+								port: "web"
 								relabelings: [...#PrometheusOperatorRelabelConfig] & [
-										{
+									{
 										replacement: "cloud-app"
 										targetLabel: "cc_prom_source"
 									},
 								]
 							}]
-							namespaceSelector: matchNames: [ "monitoring-app"]
+							namespaceSelector: matchNames: ["monitoring-app"]
 							selector: matchLabels: app: "kube-prometheus-stack-prometheus"
 						}
 					}
@@ -34,16 +34,16 @@ envs: [string]: {
 						prometheusZone: "comnet"
 						spec: {
 							endpoints: [{
-								path:        "/metrics"
-								port:        "web"
+								path: "/metrics"
+								port: "web"
 								relabelings: [...#PrometheusOperatorRelabelConfig] & [
-										{
+									{
 										replacement: "cloud-app"
 										targetLabel: "cc_prom_source"
 									},
 								]
 							}]
-							namespaceSelector: matchNames: [ "monitoring-app"]
+							namespaceSelector: matchNames: ["monitoring-app"]
 							selector: matchLabels: app: "kube-prometheus-stack-alertmanager"
 						}
 					}

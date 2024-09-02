@@ -13,7 +13,7 @@ envs: [string]: {
 			zone_name:       zone.name
 			domain_name:     zone.domain_name
 			infra_zone_name: infra_zone.name
-			zones: [string]: content: [ ...#DNSRecord]
+			zones: [string]: content: [...#DNSRecord]
 			zones: "\(zone.domain_name)":      _
 			zones: "\(zone.priv_domain_name)": _
 		}
@@ -24,6 +24,5 @@ envs: [string]: {
 	name: string
 	type: *"A" | "AAAA" | "CNAME" | "MX" | "TXT" | "PTR" | "SRV" | "SPF" | "NAPTR" | "CAA" | "NS"
 	ttl:  *900 | number
-	records: [ ...string]
+	records: [...string]
 }
-

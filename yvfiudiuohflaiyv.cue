@@ -123,7 +123,7 @@ envs: [=~"^(ocb-aoahobmpzsqohsjw|ocb-zymbygzzytlalgvl|ocb-psunvwhpwjejrxpb|ocb-p
 				"kubernetes.io/ingress.class":                    string
 				"nginx.ingress.kubernetes.io/backend-protocol":   "HTTPS"
 				"nginx.ingress.kubernetes.io/force-ssl-redirect": "true"
-				"byzbcddzcjthnazj.io/cluster-issuer":                 "letsencrypt-prod"
+				"byzbcddzcjthnazj.io/cluster-issuer":             "letsencrypt-prod"
 			}
 			Hosts=hosts: [
 				{
@@ -133,7 +133,7 @@ envs: [=~"^(ocb-aoahobmpzsqohsjw|ocb-zymbygzzytlalgvl|ocb-psunvwhpwjejrxpb|ocb-p
 			]
 			tls: [
 				{
-					hosts: [ for h in Hosts {h.host}]
+					hosts: [for h in Hosts {h.host}]
 					secretName: "cjppmetyaderslgo-tls"
 				},
 			]
@@ -188,7 +188,7 @@ envs: [=~"^(ocb-aoahobmpzsqohsjw|ocb-zymbygzzytlalgvl|ocb-psunvwhpwjejrxpb|ocb-p
 			replicas: *3 | int
 			raft: {
 				enabled: ha.enabled
-				config:  template.Execute("""
+				config: template.Execute("""
 					ui = true
 					listener "tcp" {
 					  address = "[::]:8200"

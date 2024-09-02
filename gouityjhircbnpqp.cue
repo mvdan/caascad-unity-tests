@@ -28,7 +28,7 @@ envs: [string]: {
 			if zone.name == "ipkmllvrrijnkfib" {
 				buckets: {
 					iteciireojbigwpe: _
-					iyphjdnvrvpkizcu:  _
+					iyphjdnvrvpkizcu: _
 					"tczfxjfecbzgxqeq-backup": expiration_days: 30
 				}
 			}
@@ -36,8 +36,8 @@ envs: [string]: {
 			if zone.type == "infra" || zone.type == "cloud" {
 				buckets: {
 					iteciireojbigwpe: _
-					quay:   _
-					"postgres-backup": expiration_days: 60
+					quay:             _
+					"postgres-backup": expiration_days:         60
 					"tczfxjfecbzgxqeq-backup": expiration_days: 30
 				}
 			}
@@ -62,8 +62,8 @@ envs: [string]: {
 						expiration_days: strconv.ParseInt(strings.TrimSuffix(zone.monitoring.logs.client.retention, "d"), 10, 16)
 					}
 					"thanos-cloud-comnet": _
-					"thanos-cloud-client":  _
-					"thanos-cloud-app":     _
+					"thanos-cloud-client": _
+					"thanos-cloud-app":    _
 				}
 			}
 		}

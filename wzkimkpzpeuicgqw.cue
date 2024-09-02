@@ -40,7 +40,7 @@ envs: [string]: {
 
 			bastion_tags: fqdn: "bst.\(zone.name).comnet.com"
 
-			remote_ip_prefix_ssh: [ "127.0.0.1/24"]
+			remote_ip_prefix_ssh: ["127.0.0.1/24"]
 		}
 	}
 }

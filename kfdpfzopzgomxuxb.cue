@@ -16,7 +16,7 @@ envs: [string]: {
 			infra_zone_name:                        infra_zone.name
 			aws_region:                             "eu-west-1"
 			sns_forward_subscription_email_address: "support.comnet@comnet.com"
-			cjppmetyaderslgo_aws_sts_role:                     "power_user_\(infra_zone.name)"
+			cjppmetyaderslgo_aws_sts_role:          "power_user_\(infra_zone.name)"
 		}
 	}
 }

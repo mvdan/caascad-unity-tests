@@ -2,7 +2,7 @@ package terraform
 
 #Rancher2BaseTFvars: {
 	zone_name:       string
-	comnet_domain:  string
+	comnet_domain:   string
 	rancher_api_url: *null | string
 	local_users: [Name=string]: #Rancher2LocalUser & {
 		username: Name
@@ -26,16 +26,16 @@ package terraform
 #Rancher2RoleTemplate: {
 	{annotations: [string]: string} | *{annotations: null}
 	{labels: [string]: string} | *{labels: null}
-	name:              string
-	administrative:    *false | bool
-	context:           *"cluster" | "project"
-	default_role:      *false | bool
-	description:       *null | string
-	external:          *false | bool
-	hidden:            *false | bool
-	locked:            *false | bool
+	name:           string
+	administrative: *false | bool
+	context:        *"cluster" | "project"
+	default_role:   *false | bool
+	description:    *null | string
+	external:       *false | bool
+	hidden:         *false | bool
+	locked:         *false | bool
 	role_template_ids: *null | [...string]
-	rules:             *null | [...#Rancher2RoleTemplateRule]
+	rules: *null | [...#Rancher2RoleTemplateRule]
 }
 
 #Rancher2RoleTemplateRule: {
@@ -93,11 +93,11 @@ package terraform
 }
 
 #Rancher2LocalUserToken: {
-	name:                     *null | string
-	user_name:                *null | string
-	user_id:                  *null | string
-	cluster_name:             *null | string
-	cluster_id:               *null | string
+	name:                                *null | string
+	user_name:                           *null | string
+	user_id:                             *null | string
+	cluster_name:                        *null | string
+	cluster_id:                          *null | string
 	cjppmetyaderslgo_zone:               *null | "infra" | "cloud" | "client"
 	cjppmetyaderslgo_secret_path:        *null | string
 	cjppmetyaderslgo_secret_name_prefix: *null | string
