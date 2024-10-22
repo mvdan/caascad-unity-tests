@@ -2,6 +2,7 @@ package ci
 
 import (
 	t "comnet.io/terraform"
+	"list"
 )
 
 pipelines: "envs-plan-all-\(infra_zone)": {
@@ -18,7 +19,7 @@ pipelines: "envs-plan-all-\(infra_zone)": {
 			},
 		]
 
-		jobs: [
+		jobs: list.Concat([[
 			{
 				name:   "generate"
 				serial: true
@@ -56,7 +57,7 @@ pipelines: "envs-plan-all-\(infra_zone)": {
 					},
 				]
 			},
-		] + [
+		], [
 			for idx, job in [for env_name, env in t.envs
 				for config_name, _ in env.configurations
 				if env.infra_zone.name == infra_zone {
@@ -99,6 +100,6 @@ pipelines: "envs-plan-all-\(infra_zone)": {
 					},
 				]
 			},
-		]
+		]])
 	}
 }
